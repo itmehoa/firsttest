@@ -1,0 +1,90 @@
+</head>
+<body>
+    <script type="text/javascript">
+        function abc(f)
+            {
+                var a=1*(f.box.value);
+                if(a>=10000 && a<=99999)
+                {
+                    for(var i=0; i<5;i++)
+                    {
+                        a=a+10;
+                        a=a*3;
+                        a=a+20;
+                        a=a*5;
+                        a=a+30;
+                        a=a*7;                        
+                    }
+                    alert(a);
+                    var b=a.toString();
+                    var c=b.split("");
+                    alert(c);
+                    for(var i=0;i<c.length;i++)
+                    {
+                        if(c[i]==0)
+                        {
+                            c[i]=String.fromCharCode(parseInt(c[i])+106);
+                        }
+                        else
+                        {
+                            
+                            c[i]=String.fromCharCode(parseInt(c[i])+96);
+                        }
+                    }
+                    c=c.join('');
+                    f.square.value=c;
+                    
+                }
+                else
+                {
+                    alert("Sorry! number is invalid");
+                }
+            }
+        
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+<form>
+<table border="1px">
+<tr>
+    <td>Plain Text</td>
+    <td><input type="text" size="16" name="box"></td>
+    <td><input type="button" value="Encrypt" onclick="abc(this.form)"></td>
+</tr>
+<tr>
+    <td>Ciphertext</td>
+    <td><input type= "text" size="16" name="square" ></td>
+    <td><br></br>   </td>
+</tr>
+<tr>
+    <td> <br></br> </td>
+    <td> <br></br> </td>
+    <td> <br></br> </td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+</body>
+
+</html>
+
